@@ -1,0 +1,15 @@
+{
+  "name": "fe-docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Stone",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy-gh": "GH=1 bash scripts/deploy-gh.sh"
+  },
+  "devDependencies": {
+    "vuepress": "^1.9.7"
+  }
+}
