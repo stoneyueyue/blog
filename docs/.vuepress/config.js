@@ -19,6 +19,12 @@ module.exports = {
         collapsable: false,
         sidebarDepth: 2,
         children: ['/web-api/event.md', '/web-api/event-target.md']
+      },
+      {
+        title: 'Compile & Build',
+        collapsable: false,
+        sidebarDepth: 2,
+        children: ['/coompile-build/arrow-function.md']
       }
     ]
   }
