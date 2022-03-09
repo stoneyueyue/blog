@@ -13,6 +13,12 @@ module.exports = {
         collapsable: false,
         sidebarDepth: 2,
         children: ['/html/html-semantic.md']
+      },
+      {
+        title: 'Web API',
+        collapsable: false,
+        sidebarDepth: 2,
+        children: ['/web-api/event.md', '/web-api/event-target.md']
       }
     ]
   }
