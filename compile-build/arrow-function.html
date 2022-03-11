@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>箭头函数</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.b6bfb1ac.css" as="style"><link rel="preload" href="/blog/assets/js/app.04c9f3c5.js" as="script"><link rel="preload" href="/blog/assets/js/2.9a41b01f.js" as="script"><link rel="preload" href="/blog/assets/js/8.00a5e386.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.2866f7ce.js"><link rel="prefetch" href="/blog/assets/js/11.430ab90a.js"><link rel="prefetch" href="/blog/assets/js/12.d1d8e784.js"><link rel="prefetch" href="/blog/assets/js/3.de7e3bc8.js"><link rel="prefetch" href="/blog/assets/js/4.b7d0708f.js"><link rel="prefetch" href="/blog/assets/js/5.9e2f4ca7.js"><link rel="prefetch" href="/blog/assets/js/6.c7b54f12.js"><link rel="prefetch" href="/blog/assets/js/7.f39602d3.js"><link rel="prefetch" href="/blog/assets/js/9.86eb72f7.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.b6bfb1ac.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/blog/overview/" class="sidebar-link">Overview</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>HTML</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/html/html-semantic.html" class="sidebar-link">HTML 语义化</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Web API</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/web-api/event.html" class="sidebar-link">Event</a></li><li><a href="/blog/web-api/event-target.html" class="sidebar-link">EventTarget</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Compile &amp; Build</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/compile-build/arrow-function.html" aria-current="page" class="active sidebar-link">箭头函数</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/compile-build/arrow-function.html#箭头函数的特性" class="sidebar-link">箭头函数的特性</a></li><li class="sidebar-sub-header"><a href="/blog/compile-build/arrow-function.html#箭头函数的编译" class="sidebar-link">箭头函数的编译</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/compile-build/arrow-function.html#编译前" class="sidebar-link">编译前</a></li><li class="sidebar-sub-header"><a href="/blog/compile-build/arrow-function.html#编译后" class="sidebar-link">编译后</a></li></ul></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="箭头函数"><a href="#箭头函数" class="header-anchor">#</a> 箭头函数</h1> <h2 id="箭头函数的特性"><a href="#箭头函数的特性" class="header-anchor">#</a> 箭头函数的特性</h2> <ul><li>箭头函数没有自己的this对象</li> <li>箭头函数不可以当作构造函数，也就是说，不可以对箭头函数使用new命令，否则会抛出一个错误</li> <li>不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用<code>rest</code>参数代替</li> <li>不可以使用yield命令，因此箭头函数不能用作 Generator 函数。</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token function-variable function">headAndTail</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">head<span class="token punctuation">,</span> <span class="token operator">...</span>tail</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>head<span class="token punctuation">,</span> tail<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token function">headAndTail</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+<span class="token comment">// [1,[2,3,4,5]]</span>
+
+</code></pre></div><p>对于普通函数来说，内部的<code>this</code>指向函数运行时所在的对象，但是这一点对箭头函数不成立。它没有自己的this对象，内部的this就是定义时上层作用域中的this。也就是说，箭头函数内部的this指向是固定的，相比之下，普通函数的this指向是可变的。</p> <h2 id="箭头函数的编译"><a href="#箭头函数的编译" class="header-anchor">#</a> 箭头函数的编译</h2> <h3 id="编译前"><a href="#编译前" class="header-anchor">#</a> 编译前</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token number">0</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">getValue</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>rest</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>rest<span class="token punctuation">)</span>
+      <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>value
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">setValue</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">newValue</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>value <span class="token operator">=</span> newValue
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="编译后"><a href="#编译后" class="header-anchor">#</a> 编译后</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">this</span><span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">getValue</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> _len <span class="token operator">=</span> arguments<span class="token punctuation">.</span>length<span class="token punctuation">,</span> rest <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span>_len<span class="token punctuation">)</span><span class="token punctuation">,</span> _key <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> _key <span class="token operator">&lt;</span> _len<span class="token punctuation">;</span> _key<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        rest<span class="token punctuation">[</span>_key<span class="token punctuation">]</span> <span class="token operator">=</span> arguments<span class="token punctuation">[</span>_key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>rest<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> _this<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">setValue</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token function">setValue</span><span class="token punctuation">(</span><span class="token parameter">newValue</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> _this<span class="token punctuation">.</span>value <span class="token operator">=</span> newValue<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>通过编译结果可以发现，箭头函数编译后，转换成了普通的<code>function</code>，并且通过闭包，在变量<code>_this</code>保留了箭头函数上层作用域的<code>this</code>引用。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/web-api/event-target.html" class="prev">
+        EventTarget
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.04c9f3c5.js" defer></script><script src="/blog/assets/js/2.9a41b01f.js" defer></script><script src="/blog/assets/js/8.00a5e386.js" defer></script>
+  </body>
+</html>
