@@ -14,6 +14,12 @@ module.exports = {
         sidebarDepth: 2,
         children: ['/html/html-semantic.md']
       },
+      // {
+      //   title: 'Sass',
+      //   collapsable: false,
+      //   sidebarDepth: 2,
+      //   children: []
+      // },
       {
         title: 'Web API',
         collapsable: false,
