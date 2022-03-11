@@ -30,7 +30,7 @@ module.exports = {
         title: 'Compile & Build',
         collapsable: false,
         sidebarDepth: 2,
-        children: ['/coompile-build/arrow-function.md']
+        children: ['/compile-build/arrow-function.md']
       }
     ]
   }
