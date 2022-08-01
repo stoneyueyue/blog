@@ -20,8 +20,8 @@
 target.addEventListener(type, listener, options);
 target.addEventListener(type, listener, useCapture);
 
-const xhrEvent = new XMLHttpRequest()
-xhrEvent.addEventListener(type, listener, options')
+const xhrEvent = new XMLHttpRequest();
+xhrEvent.addEventListener(type, listener, options);
 
 ```
 

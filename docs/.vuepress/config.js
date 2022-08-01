@@ -3,10 +3,10 @@ module.exports = {
   themeConfig: {
     sidebar: [
       {
-        title: 'Overview',
-        path: '/overview/',
+        title: '编程基础',
         collapsable: false,
-        sidebarDepth: 2
+        sidebarDepth: 2,
+        children: ['/basic/network.md', '/basic/web-socket.md']
       },
       {
         title: 'HTML',
@@ -14,12 +14,12 @@ module.exports = {
         sidebarDepth: 2,
         children: ['/html/html-semantic.md']
       },
-      // {
-      //   title: 'Sass',
-      //   collapsable: false,
-      //   sidebarDepth: 2,
-      //   children: []
-      // },
+      {
+        title: 'JavaScript标准内置对象',
+        collapsable: false,
+        sidebarDepth: 2,
+        children: ['JavaScript标准内置对象/Function.md']
+      },
       {
         title: 'Web API',
         collapsable: false,
