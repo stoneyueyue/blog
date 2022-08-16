@@ -6,13 +6,19 @@ module.exports = {
         title: '编程基础',
         collapsable: false,
         sidebarDepth: 2,
-        children: ['/basic/network.md', '/basic/web-socket.md']
+        children: ['/basic/network.md', '/basic/domain-and-dns.md', '/basic/web-sockets.md']
       },
       {
         title: 'HTML',
         collapsable: false,
         sidebarDepth: 2,
         children: ['/html/html-semantic.md']
+      },
+      {
+        title: 'JavaScript基础',
+        collapsable: false,
+        sidebarDepth: 2,
+        children: ['/javascript-basic/type-of-data.md']
       },
       {
         title: 'JavaScript标准内置对象',
