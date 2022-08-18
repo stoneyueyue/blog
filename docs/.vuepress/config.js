@@ -18,7 +18,7 @@ module.exports = {
         title: 'JavaScript基础',
         collapsable: false,
         sidebarDepth: 2,
-        children: ['/javascript-basic/type-of-data.md']
+        children: ['/javascript-basic/ECMAScript-and-JavaScript.md', '/javascript-basic/type-of-data.md', '/javascript-basic/Object.md']
       },
       {
         title: 'JavaScript标准内置对象',
