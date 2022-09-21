@@ -17,7 +17,7 @@
 
 该特性是非标准的
 
-当一个函数的 displayName 属性被定义，这个函数的 displayName 属性将返回显示名称。
+当一个函数的 displayName 属性被定义，displayName属性将返回显示名称。
 
 ```javascript
 function doSomething() {}
